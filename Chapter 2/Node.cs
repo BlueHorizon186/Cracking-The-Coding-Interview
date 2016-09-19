@@ -13,5 +13,10 @@ namespace CrackingTheCodingInterview
             Data = data;
             Next = null;
         }
+
+        public override string ToString()
+        {
+            return Data.ToString();
+        }
     }
 }

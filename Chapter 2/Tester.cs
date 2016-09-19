@@ -10,7 +10,7 @@ namespace CrackingTheCodingInterview
             var myNode = new Node(5);
 
             myList.PrintList();
-            Console.WriteLine(myNode.Data);
+            Console.WriteLine(myNode.ToString());
         }
     }
 }

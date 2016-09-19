@@ -14,9 +14,14 @@ namespace CrackingTheCodingInterview
             Size = 0;
         }
 
+        public bool IsEmpty()
+        {
+            return Size < 1;
+        }
+
         public void PrintList()
         {
-            if (Size < 1) Console.WriteLine("The List is empty.");
+            if (IsEmpty()) Console.WriteLine("The List is empty.");
             else Console.WriteLine("To be implemented...");
         }
     }
