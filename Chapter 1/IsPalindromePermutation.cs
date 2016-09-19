@@ -9,13 +9,13 @@ namespace CrackingTheCodingInterview
          *         palindrome using a frequency table.
          * *************************************************************/
 
-        public static void initTable(ref int[] table, int size)
+        private static void initTable(ref int[] table, int size)
         {
             if (table == null) table = new int[size];
             for (int i = 0; i < size; i++) table[i] = 0;
         }
 
-        public static bool IsPalindromePermutationWithHash(string str)
+        private static bool IsPalindromePermutationWithHash(string str)
         {
             // Missing: Trim whitespace the given string might contain.
             var tableSize = 'z' - 'a' + 1;
@@ -47,7 +47,7 @@ namespace CrackingTheCodingInterview
          *         palindrome using a bit vector.
          * *************************************************************/
 
-         public static void toggleBit(ref int vector, int index)
+         private static void toggleBit(ref int vector, int index)
          {
              if (index < 0) return ;
 
@@ -56,12 +56,12 @@ namespace CrackingTheCodingInterview
              else vector &= ~mask;
          }
 
-         public static bool hasOnlyOneBitSet(int bitVector)
+         private static bool hasOnlyOneBitSet(int bitVector)
          {
              return ((bitVector & (bitVector - 1)) == 0);
          }
 
-         public static bool IsPalindromePermutationWithBitVector(string str)
+         private static bool IsPalindromePermutationWithBitVector(string str)
          {
              // Missing: Trim whitespace the given string might contain.
              int bitVector = 0;

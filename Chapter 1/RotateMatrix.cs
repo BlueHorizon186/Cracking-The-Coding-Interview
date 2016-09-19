@@ -8,7 +8,7 @@ namespace CrackingTheCodingInterview
          *          Rotate the given matrix by 90 degrees.
          * *************************************************************/
 
-         public static int[,] RotateMatrix(int[,] mat)
+         private static int[,] RotateMatrix(int[,] mat)
          {
              // Missing: Check if matrix is null and create it in such case.
              // Also, make sure it is square.
@@ -31,7 +31,7 @@ namespace CrackingTheCodingInterview
          *      additional structures.)
          * *************************************************************/
 
-        public static void RotateMatrixInPlace(int[,] matrix)
+        private static void RotateMatrixInPlace(int[,] matrix)
         {
             // Missing: Check if matrix is null and create it in such case.
             // Also, make sure it is square.

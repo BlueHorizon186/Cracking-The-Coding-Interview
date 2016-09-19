@@ -8,7 +8,7 @@ namespace CrackingTheCodingInterview
         /* **************************************************************
          *             1) String has only Unique Characters
          * *************************************************************/
-        public static bool IsUniqueWithSort(String str)
+        private static bool IsUniqueWithSort(String str)
         {
             if (str.Length > 26) return false;
 
@@ -24,7 +24,7 @@ namespace CrackingTheCodingInterview
         }
 
         // Only works with lowercase strings.
-        public static bool IsUniqueWithBitwise(String str)
+        private static bool IsUniqueWithBitwise(String str)
         {
             if (str.Length > 26) return false;
 

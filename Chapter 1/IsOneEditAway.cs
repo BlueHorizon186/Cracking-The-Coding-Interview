@@ -10,7 +10,7 @@ namespace CrackingTheCodingInterview
          *      inserted, removed, or replaced.
          * *************************************************************/
 
-         public static bool CheckForExtraChar(string s1, string s2)
+         private static bool CheckForExtraChar(string s1, string s2)
          {
              int i = 0;
              int j = 0;
@@ -32,7 +32,7 @@ namespace CrackingTheCodingInterview
              return true;
          }
 
-         public static bool CheckForReplacedChar(string s1, string s2)
+         private static bool CheckForReplacedChar(string s1, string s2)
          {
              bool foundDiff = false;
              for (int i = 0; i < s1.Length; i++)
@@ -46,7 +46,7 @@ namespace CrackingTheCodingInterview
              return foundDiff;
          }
 
-         public static bool OneEditAway(string s1, string s2)
+         private static bool OneEditAway(string s1, string s2)
          {
              if (s1.Length == s2.Length) return CheckForReplacedChar(s1, s2);
              else if (s1.Length == s2.Length - 1) return CheckForExtraChar(s1, s2);
