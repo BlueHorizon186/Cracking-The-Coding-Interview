@@ -8,9 +8,11 @@ namespace CrackingTheCodingInterview
          *          Rotate the given matrix by 90 degrees.
          * *************************************************************/
 
-         public static int[,] RotateMatrix(int[,] mat, int dimension)
+         public static int[,] RotateMatrix(int[,] mat)
          {
              // Missing: Check if matrix is null and create it in such case.
+             // Also, make sure it is square.
+             int dimension = mat.GetLength(0);
              var rotatedMatrix = new int[dimension, dimension];
 
              // Row i becomes column k where k = dimension - 1 - i.
@@ -29,9 +31,11 @@ namespace CrackingTheCodingInterview
          *      additional structures.)
          * *************************************************************/
 
-        public static void RotateMatrixInPlace(int[,] matrix, int dimension)
+        public static void RotateMatrixInPlace(int[,] matrix)
         {
             // Missing: Check if matrix is null and create it in such case.
+            // Also, make sure it is square.
+            int dimension = matrix.GetLength(0);
 
             // Use a layer pattern going from outside to inside.
             for (int layer = 0; layer < (dimension / 2); layer++)
@@ -85,7 +89,7 @@ namespace CrackingTheCodingInterview
                 Console.Write("\n");
             }
 
-            RotateMatrixInPlace(matrix, n);
+            RotateMatrixInPlace(matrix);
             Console.WriteLine("\nRotated Matrix in Place:");
             for (int i = 0; i < n; i++)
             {
@@ -97,7 +101,7 @@ namespace CrackingTheCodingInterview
                 Console.Write("\n");
             }
 
-            matrix = RotateMatrix(matrix, n);
+            matrix = RotateMatrix(matrix);
             Console.WriteLine("\nWe rotate it once more, but by creating "
                                 + "an additional matrix:");
             for (int i = 0; i < n; i++)
