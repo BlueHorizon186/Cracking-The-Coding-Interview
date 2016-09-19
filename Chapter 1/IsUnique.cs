@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace CrackingTheCodingInterview
 {
-    partial class Chapter1
+    class Chapter1
     {
         /* **************************************************************
          *             1) String has only Unique Characters
