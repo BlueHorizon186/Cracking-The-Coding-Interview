@@ -7,10 +7,17 @@ namespace CrackingTheCodingInterview
         static void Main(string[] args)
         {
             var myList = new MyLinkedList();
-            var myNode = new Node(5);
+
+            myList.AddElement(5);
+            myList.AddElement(10);
+            myList.AddElement(17);
+            myList.AddElement(23);
+            myList.AddElement(19);
+            myList.AddElement("lolpol");
+            myList.AddElement(23.45);
 
             myList.PrintList();
-            Console.WriteLine(myNode.ToString());
+            Console.WriteLine(myList.Size);
         }
     }
 }
