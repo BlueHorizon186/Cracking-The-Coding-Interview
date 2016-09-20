@@ -39,7 +39,19 @@ namespace CrackingTheCodingInterview
 
         public void RemoveDuplicatesWithPointers()
         {
-            return ;
+            Node current = root;
+            while (current != null)
+            {
+                var runner = current;
+                while (runner.Next != null)
+                {
+                    if (runner.Next.Data == current.Data)
+                        runner.Next = runner.Next.Next;
+                    else
+                        runner = runner.Next;
+                }
+                current = current.Next;
+            }
         }
     }
 }

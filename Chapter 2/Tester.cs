@@ -27,7 +27,17 @@ namespace CrackingTheCodingInterview
 
             // Let's remove the duplicated elements using our Hash method.
             myList.RemoveDuplicatesWithHash();
-            Console.WriteLine("List Without Duplicates:");
+            Console.WriteLine("\nList Without Duplicates:");
+            myList.PrintList();
+
+            // We add some more elements to have more duplicates.
+            FillList(myList);
+            Console.WriteLine("\nNew List:");
+            myList.PrintList();
+
+            // And now, we try our remove with pointers method.
+            myList.RemoveDuplicatesWithPointers();
+            Console.WriteLine("\nList Without Duplicates:");
             myList.PrintList();
         }
     }
