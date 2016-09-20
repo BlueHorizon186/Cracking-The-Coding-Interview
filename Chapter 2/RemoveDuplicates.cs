@@ -40,9 +40,11 @@ namespace CrackingTheCodingInterview
         public void RemoveDuplicatesWithPointers()
         {
             Node current = root;
+            Node runner = null;
+
             while (current != null)
             {
-                var runner = current;
+                runner = current;
                 while (runner.Next != null)
                 {
                     if (runner.Next.Data == current.Data)
