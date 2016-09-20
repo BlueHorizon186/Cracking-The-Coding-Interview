@@ -4,20 +4,31 @@ namespace CrackingTheCodingInterview
 {
     class Chapter2
     {
+        const int ELEMS = 10;
+
+        static void FillList(MyLinkedList lst)
+        {
+            Random rand = new Random();
+            for (int i = 0; i < ELEMS; i++)
+            {
+                lst.AddElement(rand.Next(ELEMS));
+            }
+        }
+        
         static void Main(string[] args)
         {
+            // Populate our Linked List.
             var myList = new MyLinkedList();
+            FillList(myList);
 
-            myList.AddElement(5);
-            myList.AddElement(10);
-            myList.AddElement(17);
-            myList.AddElement(23);
-            myList.AddElement(19);
-            myList.AddElement("lolpol");
-            myList.AddElement(23.45);
-
+            // Print our list.
+            Console.WriteLine("First List:");
             myList.PrintList();
-            Console.WriteLine(myList.Size);
+
+            // Let's remove the duplicated elements using our Hash method.
+            myList.RemoveDuplicatesWithHash();
+            Console.WriteLine("List Without Duplicates:");
+            myList.PrintList();
         }
     }
 }

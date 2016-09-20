@@ -3,7 +3,7 @@ using System;
 namespace CrackingTheCodingInterview
 {
     // Basic Linked List implementation.
-    public class MyLinkedList
+    public partial class MyLinkedList
     {
         // The 'root' field stores the head of the list.
         private Node root;
@@ -20,7 +20,7 @@ namespace CrackingTheCodingInterview
         }
 
         // Add a new element to the tail of the list.
-        public void AddElement(object data)
+        public void AddElement(int data)
         {
             if (root == null)
             {
@@ -43,10 +43,21 @@ namespace CrackingTheCodingInterview
             return Size < 1;
         }
 
+        // Clear or empty the list.
+        public void Clear()
+        {
+            root = null;
+            Size = 0;
+        }
+
         // Print the elements of the list.
         public void PrintList()
         {
-            if (IsEmpty()) Console.WriteLine("The List is empty.");
+            if (IsEmpty())
+            {
+                Console.WriteLine("The List is empty.");
+                return ;
+            }
             
             var current = root;
             Console.Write("{ ");
