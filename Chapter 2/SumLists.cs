@@ -99,17 +99,6 @@ namespace CrackingTheCodingInterview
         }
 
         /* **************************************************************
-         *     Add two numbers in Linked Lists where the digits
-         *     are in their actual order.
-         * *************************************************************/
-
-         public static LinkedList<int> AddListsInOrder(LinkedList<int> lst1,
-                                                       LinkedList<int> lst2)
-         {
-             return null;
-         }
-
-        /* **************************************************************
          *                    Testing Main Method!!!
          * *************************************************************/
 
