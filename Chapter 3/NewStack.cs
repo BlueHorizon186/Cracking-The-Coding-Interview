@@ -51,6 +51,7 @@ namespace CrackingTheCodingInterview
             // Missing: Check if Stack is Empty before popping.
             NewStackNode<T> popped = top;
             top = top.Below;
+            if (top != null) top.Above = null;
             Size--;
             return popped.Data;
         }
@@ -59,6 +60,16 @@ namespace CrackingTheCodingInterview
         {
             // Missing: Check if Stack is Empty before peeking.
             return top.Data;
+        }
+
+        public T RemoveBottom()
+        {
+            // Missing: Check if Stack is Empty before removing.
+            NewStackNode<T> removed = bottom;
+            bottom = bottom.Above;
+            if (bottom != null) bottom.Below = null;
+            Size--;
+            return removed.Data;
         }
 
         public void PrintStack()
